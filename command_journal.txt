@@ -1,2 +1,8 @@
 # create symbokic link
 ln -s ../project/flask-backend flask-backend
+
+
+=== bun runtime ===
+bun init
+bun install
+bun x vite
