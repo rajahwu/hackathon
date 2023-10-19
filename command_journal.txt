@@ -1,0 +1,2 @@
+# create symbokic link
+ln -s ../project/flask-backend flask-backend
