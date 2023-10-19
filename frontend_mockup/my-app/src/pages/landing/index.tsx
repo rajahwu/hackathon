@@ -1,13 +1,14 @@
 import HomePageLayout from "../../layouts/HomePageLayout";
-import NavBar from "../../components/navbar";
+import SiteNavBar from "../../components/navbar";
 import SplashPage from "../../components/splash";
+import MenuNavBar from "../../components/menu/navbar";
 
 export default function LandingPage() {
     return (
         <HomePageLayout>
-            <NavBar />
-                    <SplashPage />
-             
+            <SiteNavBar />
+            <SplashPage />
+            <MenuNavBar />
         </HomePageLayout>
     )
 } 
