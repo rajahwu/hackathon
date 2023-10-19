@@ -2,11 +2,14 @@ import Logo from "../logo"
 
 export default function NavBar() {
     return (
-        <header>
-            <Logo />
+        <header className="flex space-x-auto">
             <div className="container">
-                <div className="menu">
-                    <ul>
+                <Logo />
+            </div>
+
+            <div className="container">
+                <div className="flex">
+                    <ul className="flex">
                         <li>menu</li>
                         <li>events</li>
                         <li>location</li>
@@ -14,6 +17,7 @@ export default function NavBar() {
                         <li>cart</li>
                     </ul>
                 </div>
+
             </div>
         </header>
     )

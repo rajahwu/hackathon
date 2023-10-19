@@ -4,9 +4,10 @@ import SplashPage from "../../components/splash";
 
 export default function LandingPage() {
     return (
-     <HomePageLayout>
-        <NavBar />
-        <SplashPage />
-     </HomePageLayout> 
+        <HomePageLayout>
+            <NavBar />
+                    <SplashPage />
+             
+        </HomePageLayout>
     )
 } 
