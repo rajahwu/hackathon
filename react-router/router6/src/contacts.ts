@@ -2,10 +2,11 @@ import localforage from "localforage";
 import { matchSorter } from "match-sorter";
 import sortBy from "sort-by";
 
-interface Contact {
+export interface Contact {
   id: string;
   first?: string;
   last?: string;
+  favorite?: boolean;
   createdAt: number;
 }
 
