@@ -59,7 +59,7 @@ const { contact } = useLoaderData() as { contact: Contact }
           </Form>
           <Form
             method="post"
-            action="destroy"
+            action="delete"
             onSubmit={(event) => {
               if (
                 !confirm(

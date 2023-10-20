@@ -8,6 +8,8 @@ export interface Contact {
   last?: string;
   favorite?: boolean;
   twitter?: string;
+  avatar?: string;
+  notes?: string;
   createdAt: number;
 }
 
