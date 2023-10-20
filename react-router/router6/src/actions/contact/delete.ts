@@ -5,8 +5,6 @@ export async function action({ params }: { params: Params }) {
     if (!params?.contactId) {
         throw new Error("Missing contactId");
     }
-    console.log(params)
-    
     
     const { contactId } = params;
     

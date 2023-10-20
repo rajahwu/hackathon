@@ -13,13 +13,7 @@ export default function MenuItemCard({ menuItem }) {
     // const location = useLocation()
     // const currentUrl = location.pathname
 
-    // if (imageUrls[currentUrl]) {
-    //     imageUrl = imageUrls[currentUrl]
-    // } else [
-    //     imageUrl = `/images/${imageUrls["/menu/combos"]}`
-    // ]
     const imageUrl = menuItem["images"]["REGULAR"]["url"]
-    console.log(imageUrl)
 
     return (
         <div>
