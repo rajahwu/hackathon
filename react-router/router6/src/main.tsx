@@ -1,18 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider, createRoutesFromElements, Route } from 'react-router-dom'
-import './index.css'
+import { rootLoader, contactLoader } from './loaders'
+import { createAction, editAction, deleteAction, updateAction } from './actions'
 import Root from './routes/root'
-import Index from './routes'
-import ErrorPage from './error-page'
 import Contact from './routes/contact'
-import { loader as rootLoader } from './loaders/root-loader'
-import { loader as contactLoader } from './loaders/contact-loader'
-import { action as createAction } from './actions/contact/create'
-import { action as editAction } from './actions/contact/edit'
-import { action as deleteAction } from './actions/contact/delete'
-import { action as updateAction } from './actions/contact/update'
 import EditContact from './routes/edit'
+import ErrorPage from './error-page'
+import './index.css'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
