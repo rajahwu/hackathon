@@ -7,7 +7,9 @@ import ErrorPage from './error-page'
 import Contact from './routes/contact'
 import { loader as rootLoader} from './loaders/root-loader'
 import { loader as contactLoader } from './loaders/contact-loader'
-import { action as rootAction } from './actions/root-actions'
+import { action as  createAction } from './actions/contact/create'
+import { action as editAction } from './actions/contact/edit'
+import EditContact from './routes/edit'
 
 const router = createBrowserRouter([
   {
@@ -15,13 +17,19 @@ const router = createBrowserRouter([
     element: <Root />,
     errorElement: <ErrorPage />,
     loader: rootLoader,
-    action: rootAction,
+    action: createAction,
     children: [
       {
         path: "/contacts/:contactId",
         element: <Contact />,
         loader: contactLoader
 
+      },
+      {
+        path: "contacts/:contactId/edit",
+        element: <EditContact />,
+        loader: contactLoader,
+        action: editAction
       }
     ]
   },

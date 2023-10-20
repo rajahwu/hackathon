@@ -1,4 +1,4 @@
-import { createContact } from "../contacts";
+import { createContact } from "../../contacts";
 
 export async function action() {
     const contact = await createContact()

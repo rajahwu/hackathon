@@ -7,6 +7,7 @@ export interface Contact {
   first?: string;
   last?: string;
   favorite?: boolean;
+  twitter?: string;
   createdAt: number;
 }
 
