@@ -5,6 +5,7 @@ import App from './App.tsx'
 import './index.css'
 import Menu from './pages/menu/index.tsx'
 import View from './components/menu/view/index.tsx'
+import { loader as menuItemLoader } from './data/loaders/menuItemLoader.ts'
 
 
 const router = createBrowserRouter(
@@ -16,22 +17,26 @@ const router = createBrowserRouter(
       <Route
         path='/menu'
         element={<Menu />}
-      >
+        >
         <Route
           path='combos'
           element={<View />}
-        />
+          loader={menuItemLoader}
+          />
         <Route
           path='supah-shakes'
           element={<View />}
-        />
+          loader={menuItemLoader}
+          />
         <Route
           path='for-you'
           element={<View />}
-        />
+          loader={menuItemLoader}
+          />
         <Route
           path='stays-active'
           element={<View />}
+          loader={menuItemLoader}
         />
         <Route
           path='goodies'
