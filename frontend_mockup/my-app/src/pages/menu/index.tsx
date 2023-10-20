@@ -1,16 +1,5 @@
-import MenuItemCard from "../../components/menu/itemcard"
+import { Outlet } from "react-router-dom"
 
 export default function Menu() {
-    return (
-        <>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                <MenuItemCard />
-                <MenuItemCard />
-                <MenuItemCard />
-                <MenuItemCard />
-                <MenuItemCard />
-                <MenuItemCard />
-            </div>
-        </>
-    )
+  return <Outlet />
 }
