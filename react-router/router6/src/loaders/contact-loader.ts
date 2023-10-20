@@ -11,5 +11,11 @@ export const loader = async ({ params }: { params: RouteParams}) => {
   }
   const { contactId } = params;
   const contact = await getContact(contactId);
+  if (!contact) {
+    throw new Response("", {
+      status: 404,
+      statusText: "Not Found",
+    });
+  }
   return { contact };
 }
