@@ -1,6 +1,8 @@
 # create symbokic link
 ln -s ../project/flask-backend flask-backend
 
+curl -X GET --header "Accept: application/json" --header "Accept-Language: en" "https://api.edamam.com/api/recipes/v2?type=public&app_id=d389eb17&app_key=f5ed191af0a65fcd8d7577ccbbb1be12&dishType=Drinks"
+
 
 === bun runtime ===
 bun init

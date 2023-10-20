@@ -1,4 +1,9 @@
 import MenuItemCard from "../itemcard";
+import { getMenuItems } from "../../../data/getMenuItems"
+
+const items = await getMenuItems() 
+console.log(items)
+
 
 export default function View() {
     return (
