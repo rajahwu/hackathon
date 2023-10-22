@@ -3,13 +3,14 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "dev": "bun x astro dev",
+    "start": "bun x astro dev",
+    "build": "bun x astro build",
+    "preview": "bun x astro preview",
+    "astro": "bun x astro"
   },
   "dependencies": {
+    "@astrojs/netlify": "^3.0.3",
     "@astrojs/react": "^3.0.3",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
