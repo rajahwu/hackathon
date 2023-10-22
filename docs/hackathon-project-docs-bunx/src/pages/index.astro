@@ -1,26 +1,48 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
 
-const title = "How [\`app_academy_hackathon\n${date}@team15_project\`] Works - An End to End Explation"
+const title = "How [\`app_academy_hackathon\n${date}@team15_project\`] Works"
+const subtitle = "- An End to End Explanation"
 ---
 
 <Layout title="">
-	<main>
-		<h1>{ title }</h1>
+	<main class="mx-auto, p-4, w-[800px], max-w-[calc(100% - 2rem)] text-slate-200 leading-[1.6]">
+		<div class="flex flex-col">
+			<h1 class="text-4xl h-auto mb-1 text-center leading-4 text-slate-100">{ title }
+			<span class="text-3xl">- An End to End Explanation</span>
+			</h1>
+		</div>
+		<div class="flex h-screen justify-center items-center">
+			<div class="text-center">
+				<h2>Contents</h2>
+				<ol>
+					<li>Abstract</li>
+					<li>Introduction</li>
+					<li>Architecture</li>
+					<li>Setting Up the Environment</li>
+					<li>Directory Structure</li>
+					<li>Data Flow</li>
+					<li>Backend</li>
+					<li>Frontend</li>
+					<li>Database</li>
+					<li>Authentication and Authorization</li>
+					<li>Third-Party Services</li>
+					<li>Testing</li>
+					<li>Deployment</li>
+					<li>Scaling and Performance</li>
+					<li>Troubleshooting and Debugging</li>
+					<li>Conclusion</li>
+					<li>References</li>
+					<li>Appendices</li>
+					<li>Acknowledgments</li>
+					<li></li>
+				</ol>
+			</div>
+		</div>
 	</main>
 </Layout>
 
 <style>
-	main {
-		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: white;
-		font-size: 20px;
-		line-height: 1.6;
-	}
 	.astro-a {
 		position: absolute;
 		top: -32px;
@@ -31,11 +53,9 @@ const title = "How [\`app_academy_hackathon\n${date}@team15_project\`] Works - A
 		z-index: -1;
 	}
 	h1 {
-		font-size: 4rem;
 		font-weight: 700;
 		line-height: 1;
 		text-align: center;
-		margin-bottom: 1em;
 	}
 	.text-gradient {
 		background-image: var(--accent-gradient);
