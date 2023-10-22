@@ -10,6 +10,7 @@
     "astro": "bun x astro"
   },
   "dependencies": {
+    "@astrojs/mdx": "^1.1.2",
     "@astrojs/netlify": "^3.0.3",
     "@astrojs/react": "^3.0.3",
     "@astrojs/tailwind": "^5.0.2",
