@@ -1,6 +1,9 @@
 {
   "dependencies": { "@types/node": "^20.8.7", "react-icons": "^4.11.0" },
   "devDependencies": {
-    "daisyui": "latest"
+    "@tailwindcss/typography": "^0.5.10",
+    "daisyui": "latest",
+    "install": "^0.13.0",
+    "npm": "^10.2.1"
   }
 }
