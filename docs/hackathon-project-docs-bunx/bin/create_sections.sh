@@ -1,5 +1,16 @@
 #!/bin/bash
 
+force=false  # Default is to not force overwrite
+
+# Parse command line arguments
+while [[ "$#" -gt 0 ]]; do
+    case $1 in
+        --force) force=true ;;
+        *) echo "Unknown parameter: $1"; exit 1 ;;
+    esac
+    shift
+done
+
 # List of section names from index.astro
 sections=(
     "Abstract"
@@ -38,11 +49,20 @@ for section in "${sections[@]}"; do
             # Rename the file to lowercase with .mdx extension
             mv "$file_path" "src/pages/sections/$filename"
             echo "Renamed $file_path to src/pages/sections/$filename."
+        elif [ "$force" = true ]; then
+            # Force overwrite the file's contents
+            echo "Force overwriting file: $file_path"
         else
-            echo "File '$file_path' already exists. Updating contents."
+            echo "File '$file_path' already exists. Use --force to update contents."
+            continue
         fi
     fi
 
-    # Create or update the .mdx file with the section name
-    echo "# ${section}" > "src/pages/sections/$filename"
+    # Create or update the .mdx file with the specified format
+    echo "---
+layout: ../../layouts/Section.astro
+---
+import { Title } from \"../../components/react\";
+
+<Title title=\"$section\" />" > "src/pages/sections/$filename"
 done
