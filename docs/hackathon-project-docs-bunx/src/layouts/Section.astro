@@ -43,7 +43,7 @@ import Layout from "./Layout.astro"
     const currentPath = window.location.pathname;
     const currentIndex = sections.findIndex(section => section.href === currentPath);
     
-    if (prevLink &&  currentIndex > 0) {
+    if (prevLink && currentIndex > 0) {
         prevLink.href = sections[currentIndex - 1].href;
     } else if(prevLink) {
         prevLink.style.display = "none"; // Hide the link if it's the first section
