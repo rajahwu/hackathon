@@ -3,8 +3,56 @@ import Layout from "./Layout.astro"
 ---
 
 <Layout title="">
-    <div class="prose prose-stone bg-slate-300 flex flex-col mx-auto px-16 pt-5 pb-16 prose-h1:text-center rounded mt-5">
+    <div class="prose prose-neutral border flex flex-col mx-auto px-16 pt-5 pb-16 prose-h1:text-center rounded mt-5">
+        <div class="navbar text-neutral-content flex text-slate-600 justify-between">
+            <a id="prev-section-link" class="btn btn-ghost">prev</a>
+            <a id="contents-section-link" class="btn btn-ghost" href="/contents">contents</a>
+            <a id="next-section-link" class="btn btn-ghost">next</a>
+        </div>
         <slot />
     </div>
 </Layout>
-
+<script>
+    
+    let sections = [
+        { title: "Abstract", href: "/sections/abstract" },
+        { title: "Introduction", href: "/sections/introduction" },
+        { title: "Architecture", href: "/sections/architecture" },
+        { title: "Setting Up the Environment", href: "/sections/setting_up_the_environment" },
+        { title: "Directory Structure", href: "/sections/directory_structure" },
+        { title: "Data Flow", href: "/sections/data_flow" },
+        { title: "Backend", href: "/sections/backend" },
+        { title: "Frontend", href: "/sections/frontend" },
+        { title: "Database", href: "/sections/database" },
+        { title: "Authentication and Authorization", href: "/sections/authentication_and_authorization" },
+        { title: "Third-Party Services", href: "/sections/third-party_services" },
+        { title: "Testing", href: "/sections/testing" },
+        { title: "Deployment", href: "/sections/deployment" },
+        { title: "Scaling and Performance", href: "/sections/scaling_and_performance" },
+        { title: "Troubleshooting and Debugging", href: "/sections/troubleshooting_and_debugging" },
+        { title: "Conclusion", href: "/sections/conclusion" },
+        { title: "References", href: "/sections/references" },
+        { title: "Appendices", href: "/sections/appendices" },
+        { title: "Acknowledgments", href: "/sections/acknowledgments" }
+    ];
+    
+    const prevLink = document.getElementById("prev-section-link") as HTMLAnchorElement;;
+    const nextLink = document.getElementById("next-section-link") as HTMLAnchorElement;;
+    
+    // Find the index of the current section in the array
+    const currentPath = window.location.pathname;
+    const currentIndex = sections.findIndex(section => section.href === currentPath);
+    
+    if (prevLink &&  currentIndex > 0) {
+        prevLink.href = sections[currentIndex - 1].href;
+    } else if(prevLink) {
+        prevLink.style.display = "none"; // Hide the link if it's the first section
+    }
+    
+    if (nextLink && currentIndex < sections.length - 1) {
+        nextLink.href = sections[currentIndex + 1].href;
+    } else if (nextLink) {
+        nextLink.style.display = "none"; // Hide the link if it's the last section
+    }
+    
+    </script>
