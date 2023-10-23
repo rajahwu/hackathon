@@ -8,7 +8,10 @@
     "build": "bun x astro build",
     "preview": "bun x astro preview",
     "astro": "bun x astro",
-    "test:e2e": "bun playwright test"
+    "test:e2e": "playwright test",
+    "test:unit": "cypress run",
+    "coverage:e2e": "nyc npm run test:e2e",
+    "coverage:unit": "nyc npm run test:unit"
   },
   "dependencies": {
     "@astrojs/mdx": "^1.1.2",
